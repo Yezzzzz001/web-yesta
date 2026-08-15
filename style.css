@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* kotak utama di tengah */
+.slide-container {
+    width: 80%;
+    max-width: 700px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    border: 4px solid #ff6f61;
+    border-radius: 10px;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+/* teks berjalan di dalam border */
+.slide-text {
+    position: absolute;
+    width: 100%;
+    animation: slideText 30s linear infinite;
+}
+
+@keyframes slideText {
+    0%   { top: 100%; }
+    100% { top: -100%; }
+}
+
+/* tombol kembali */
+.logout {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.logout:hover {
+    background: #ff3b2e;
+}
+
+/* responsif */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+    .slide-container {
+        width: 90%;
+        height: 220px;
+    }
+}
